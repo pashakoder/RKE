@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul {
+    display: flex;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
