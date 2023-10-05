@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,20 +17,51 @@
             </ul>
         </nav>
     </header>
-    <h3>Ответьте на наши вопросы</h3>
-    <form action="index.php" method="get">
-        <input type="checkbox" name = "manager"> Менеджер по работе с клиентами<br>
-        <input type="checkbox" name = "developer"> Разработчик<br>
-        <input type="checkbox" name = "smm"> SMM<br>
-        <input type="checkbox" name = "admin"> Сис.админ<br>
-        <input type="checkbox" name = "copyright"> Копирайтер<br>
-        
-        <h3>Личные данные</h3>
-        <input type="text" name="surname">
-        <input type="text" name="name">
-        <input type="text" name="otchestvo">
+    <div class="container">
+        <div class="wrapper">
+            <h2>Ответьте на наши вопросы</h2>
+            <h3>Название вакансии</h3>
+            <form action="index.php" method="get">
+                <input type="checkbox" name = "manager" class = "jobs"> Менеджер по работе с клиентами<br>
+                <input type="checkbox" name = "developer" class = "jobs"> Разработчик<br>
+                <input type="checkbox" name = "smm" class = "jobs"> SMM<br>
+                <input type="checkbox" name = "admin" class = "jobs"> Сис.админ<br>
+                <input type="checkbox" name = "copyright" class = "jobs"> Копирайтер<br>
+                
+                <h3 id="pers">Личные данные</h3>
+                
+                <div class="fio">
+                    <div class="fio__el">
+                        <h3>Фамилия</h3>
+                        <input type="text" name="surname" class="first-row">
+                    </div>
+                    <div class="fio__el">
+                        <h3>Имя</h3>
+                        <input type="text" name="name" class="first-row">
+                    </div>
+                    <div class="fio__el">
+                    <h3>Отечество</h3>
+                    <input type="text" name="middlename" class="first-row">
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="tel">
+                        <h3>Телефон</h3>
+                        <input type="text" name = "tel" class="second-row">
+                    </div>
 
-    </form>
+                    <div class="email">
+                        <h3>E-mail</h3>
+                        <input type="text" name = "email" class="second-row"> <br>
+                    </div>
+                </div>
+                    <input type="checkbox" name = "agree" id = 'agree'> Я согласен на  <a href="#" id="data">обработку персональных данных</a><br>
+                    <input type="submit" value = "Отправить" id = "button">
+                
+            </form>
+        </div>
+
+    </div>
 
 </body>
 </html>
